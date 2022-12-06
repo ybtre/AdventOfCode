@@ -3,5 +3,8 @@
 void Day1::Run()
 {
 	vector<string> PuzzleArray = utils.GetPuzzleString("day1_input.txt");
-	cout << "Hello World!\n" + PuzzleArray[0];
+
+	for (auto line : PuzzleArray) {
+		cout << line << "\n";
+	}
 }
