@@ -13,6 +13,6 @@ using namespace std;
 
 int main()
 {
-    Day1 day1{};
+    Day1 day1;
     day1.Run();
 }
