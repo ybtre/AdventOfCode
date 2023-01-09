@@ -4,26 +4,13 @@ void Day1::Run()
 {
 	vector<string> PuzzleArray = utils.GetPuzzleString("day1_input.txt");
 
-	/// <summary>
-	/// part 1
-	/// </summary>
-	//int highest_calories = 0;
-	//int current_calories = 0;
+	Part1(PuzzleArray);
 
-	/*for (auto line : PuzzleArray) {
-		if (line != "") {
-			current_calories += stoi(line);
-		}
-		else {
-			if (current_calories >= highest_calories) {
-				highest_calories = current_calories;
-			}
-			current_calories = 0;
-		}
-	}
+	Part2(PuzzleArray);
 
-	cout << "highest cal: " << highest_calories;*/
-
+}
+void Day1::Part2(std::vector<std::string>& PuzzleArray)
+{
 	/// <summary>
 	/// part 2
 	/// </summary>
@@ -64,9 +51,33 @@ void Day1::Run()
 		}
 	}
 
+	cout << "--- Part 2 ---" << endl;
 	std::cout << "top one cal: " << top_one << "\n";
 	std::cout << "top two cal: " << top_two << "\n";
-	std::cout << "top three cal: " << top_three<< "\n";
-	std::cout << "sum: " << top_one + top_two + top_three<< "\n";
+	std::cout << "top three cal: " << top_three << "\n";
+	std::cout << "sum: " << top_one + top_two + top_three << "\n";
+}
+void Day1::Part1(std::vector<std::string>& PuzzleArray)
+{
+	/// <summary>
+	/// part 1
+	/// </summary>
+	int highest_calories = 0;
+	int current_calories = 0;
 
-}	
+	for (auto line : PuzzleArray) {
+		if (line != "") {
+			current_calories += stoi(line);
+		}
+		else {
+			if (current_calories >= highest_calories) {
+				highest_calories = current_calories;
+			}
+			current_calories = 0;
+		}
+	}
+
+	cout << "--- Part 1 ---" << endl;
+	cout << "highest cal: " << highest_calories << endl;
+}
+
