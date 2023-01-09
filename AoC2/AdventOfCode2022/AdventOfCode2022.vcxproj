@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="AoCUtils.cpp" />
     <ClCompile Include="Day1.cpp" />
+    <ClCompile Include="Day2.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AoCUtils.h" />
     <ClInclude Include="Day1.h" />
+    <ClInclude Include="Day2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

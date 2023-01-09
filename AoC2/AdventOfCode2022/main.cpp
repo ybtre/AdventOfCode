@@ -8,11 +8,14 @@
 #include <iostream>
 
 #include "Day1.h"
+#include "Day2.h"
 
 using namespace std;
 
 int main()
 {
-    Day1 day1;
-    day1.Run();
+    Day2 day2;
+    day2.Run();
+    //Day1 day1;
+    //day1.Run();
 }
