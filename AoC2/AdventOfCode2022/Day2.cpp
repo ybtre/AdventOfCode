@@ -4,11 +4,12 @@ void Day2::Run()
 {
 	vector<string> PuzzleArray = utils.GetPuzzleString("day2_input.txt");
 
-	Day1Func(PuzzleArray);
-	Day2Func(PuzzleArray);
+	Part1(PuzzleArray);
+	Part2(PuzzleArray);
+	cout << '\n';
 }
 
-void Day2::Day2Func(std::vector<std::string>& PuzzleArray) {
+void Day2::Part2(std::vector<std::string>& PuzzleArray) {
 	int total_score = 0;
 	string condition = "";
 	string player_move = "";
@@ -47,10 +48,10 @@ void Day2::Day2Func(std::vector<std::string>& PuzzleArray) {
 		if (player_move == "Scissors") total_score += 3;
 	}
 
-	cout << "Total score from day 2: " << total_score << endl;
+	cout << "--Day 2 part 2-- -> Total score: " << total_score << endl;
 }
 
-void Day2::Day1Func(std::vector<std::string>& PuzzleArray)
+void Day2::Part1(std::vector<std::string>& PuzzleArray)
 {
 	int total_score = 0;
 	string player_move = "";
@@ -77,5 +78,5 @@ void Day2::Day1Func(std::vector<std::string>& PuzzleArray)
 			|| player_move == "Scissors" && opp_move == "Paper") total_score += 6;
 	}
 
-	cout << "Total score from day 1: " << total_score << endl;
+	cout << "--Day 2 part 1-- -> Total score: " << total_score << endl;
 }

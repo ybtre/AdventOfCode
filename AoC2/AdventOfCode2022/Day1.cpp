@@ -8,6 +8,7 @@ void Day1::Run()
 
 	Part2(PuzzleArray);
 
+	cout << '\n';
 }
 void Day1::Part2(std::vector<std::string>& PuzzleArray)
 {
@@ -51,11 +52,10 @@ void Day1::Part2(std::vector<std::string>& PuzzleArray)
 		}
 	}
 
-	cout << "--- Part 2 ---" << endl;
-	std::cout << "top one cal: " << top_one << "\n";
-	std::cout << "top two cal: " << top_two << "\n";
-	std::cout << "top three cal: " << top_three << "\n";
-	std::cout << "sum: " << top_one + top_two + top_three << "\n";
+	//std::cout << "top one cal: " << top_one << "\n";
+	//std::cout << "top two cal: " << top_two << "\n";
+	//std::cout << "top three cal: " << top_three << "\n";
+	std::cout << "--Day 1 part 2-- -> sum: " << top_one + top_two + top_three << "\n";
 }
 void Day1::Part1(std::vector<std::string>& PuzzleArray)
 {
@@ -77,7 +77,6 @@ void Day1::Part1(std::vector<std::string>& PuzzleArray)
 		}
 	}
 
-	cout << "--- Part 1 ---" << endl;
-	cout << "highest cal: " << highest_calories << endl;
+	cout << "--Day 1 part 1-- -> highest cal: " << highest_calories << endl;
 }
 

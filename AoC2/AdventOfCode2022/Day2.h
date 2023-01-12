@@ -7,7 +7,7 @@ public:
 	AoCUtils utils{};
 
 	void Run();
-	void Day1Func(std::vector<std::string>& PuzzleArray);
-	void Day2Func(std::vector<std::string>& PuzzleArray);
+	void Part1(std::vector<std::string>& PuzzleArray);
+	void Part2(std::vector<std::string>& PuzzleArray);
 };
 

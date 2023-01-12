@@ -14,8 +14,12 @@ using namespace std;
 
 int main()
 {
+	Day1 day1;
     Day2 day2;
+
+	day1.Run();
     day2.Run();
-    //Day1 day1;
-    //day1.Run();
+
+	system("pause");
+	return 0;
 }
