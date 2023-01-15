@@ -7,6 +7,9 @@ void Day3::Run()
 	Part1(PuzzleArray);
 	Part2(PuzzleArray);
 	cout << '\n';
+
+	vector<string> day4_puzzle = utils.GetPuzzleString("day4_input.txt");
+	day4_hack(day4_puzzle);
 }
 
 char Day3::DuplicateItem(int items_count, std::string& rucksack)
@@ -132,3 +135,43 @@ void Day3::Part2(std::vector<std::string>& PuzzleArray)
 
 	cout << "Part 2 --- Sum in set: " << sum << '\n';
 }
+
+void Day3::day4_hack(std::vector<std::string>& PuzzleArray) {
+	int total = 0;
+
+	for (auto &input : PuzzleArray) {
+		std::vector<std::string> pairs;
+		split_str(input, ',', pairs);
+
+		std::vector<std::string> first_pair;
+		split_str(pairs[0], '-', first_pair);
+
+		std::vector<std::string> second_pair;
+		split_str(pairs[1], '-', second_pair);
+
+		if (first_pair[0] <= second_pair[0]
+			&& first_pair[1] >= second_pair[1]) {
+
+			total++;
+		} else if (first_pair[0] >= second_pair[0]
+			&& first_pair[1] <= second_pair[1]) {
+
+			total++;
+		}
+	}
+
+
+	cout << "Day4 part 1 --- Sum: " << total << '\n';
+}
+
+void Day3::split_str(const std::string &str, const char delim, std::vector<std::string> &out)
+{  
+	// create a stream from the string  
+	std::stringstream s(str);
+              
+	std::string s2;  
+	while (std::getline (s, s2, delim) )  
+	{  
+		out.push_back(s2); // store the string in s2  
+	}  
+}  
