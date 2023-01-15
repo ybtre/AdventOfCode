@@ -145,16 +145,16 @@ void Day3::day4_hack(std::vector<std::string>& PuzzleArray) {
 
 		std::vector<std::string> first_pair;
 		split_str(pairs[0], '-', first_pair);
-
+		
 		std::vector<std::string> second_pair;
 		split_str(pairs[1], '-', second_pair);
 
-		if (first_pair[0] <= second_pair[0]
-			&& first_pair[1] >= second_pair[1]) {
+		if (std::stoi(first_pair[0]) <= std::stoi(second_pair[0])
+			&& std::stoi(first_pair[1]) >= std::stoi(second_pair[1])) {
 
 			total++;
-		} else if (first_pair[0] >= second_pair[0]
-			&& first_pair[1] <= second_pair[1]) {
+		} else if (std::stoi(first_pair[0]) >= std::stoi(second_pair[0])
+			&& std::stoi(first_pair[1]) <= std::stoi(second_pair[1])) {
 
 			total++;
 		}
