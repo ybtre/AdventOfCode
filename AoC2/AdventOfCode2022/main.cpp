@@ -21,9 +21,9 @@ int main()
 	Day3 day3;
 	Day4 day4;
 
-	day1.Run();
-	day2.Run();
-	day3.Run();
+	//day1.Run();
+	//day2.Run();
+	//day3.Run();
 	day4.Run();
 
 	system("pause");
