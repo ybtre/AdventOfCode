@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Day3">
       <UniqueIdentifier>{ad12ccc2-e4f6-48c5-ae2e-2425f9ea5063}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Day4">
+      <UniqueIdentifier>{773a9f80-ea55-4491-aa67-df0d57d21d75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,6 +42,9 @@
     <ClCompile Include="Day3.cpp">
       <Filter>Source Files\Day3</Filter>
     </ClCompile>
+    <ClCompile Include="Day4.cpp">
+      <Filter>Source Files\Day4</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AoCUtils.h">
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Day3.h">
       <Filter>Source Files\Day3</Filter>
+    </ClInclude>
+    <ClInclude Include="Day4.h">
+      <Filter>Source Files\Day4</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

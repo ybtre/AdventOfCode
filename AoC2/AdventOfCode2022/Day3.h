@@ -14,6 +14,5 @@ public:
 	void Part2(std::vector<std::string>& PuzzleArray);
 
 	void day4_hack(std::vector<std::string>& PuzzleArray);
-	void split_str(const std::string &str, const char delim, std::vector<std::string> &out);
+	void split_str(const std::string& str, const char delim, std::vector<std::string>& out);
 };
-

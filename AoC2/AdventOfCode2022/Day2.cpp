@@ -4,6 +4,8 @@ void Day2::Run()
 {
 	vector<string> PuzzleArray = utils.GetPuzzleString("day2_input.txt");
 
+	cout << "--- Day 2 ---" << '\n';
+
 	Part1(PuzzleArray);
 	Part2(PuzzleArray);
 	cout << '\n';
@@ -48,7 +50,7 @@ void Day2::Part2(std::vector<std::string>& PuzzleArray) {
 		if (player_move == "Scissors") total_score += 3;
 	}
 
-	cout << "--Day 2 part 2-- -> Total score: " << total_score << endl;
+	cout << "--Part 2-- -> Total score: " << total_score << endl;
 }
 
 void Day2::Part1(std::vector<std::string>& PuzzleArray)
@@ -78,5 +80,5 @@ void Day2::Part1(std::vector<std::string>& PuzzleArray)
 			|| player_move == "Scissors" && opp_move == "Paper") total_score += 6;
 	}
 
-	cout << "--Day 2 part 1-- -> Total score: " << total_score << endl;
+	cout << "--Part 1-- -> Total score: " << total_score << endl;
 }
