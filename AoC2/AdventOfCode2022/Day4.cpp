@@ -40,7 +40,34 @@ void Day4::Part1(vector<string>& PuzzleArray) {
 
 void Day4::Part2(vector<string>& PuzzleArray)
 {
-	cout << "Part 2 --- Total: " << "0" << '\n';
+	int total = 0;
+
+	for (auto& input : PuzzleArray) {
+		//vector<string> pairs;
+		string pairs[2] = { "0", "0" };
+		SplitStr(input, ',', pairs);
+
+		string first_pair[2] = { "0", "0" };
+		SplitStr(pairs[0], '-', first_pair);
+
+		string second_pair[2] = { "0", "0" };
+		SplitStr(pairs[1], '-', second_pair);
+
+		if (stoi(first_pair[0]) >= stoi(second_pair[0]) && stoi(first_pair[0]) <= stoi(second_pair[1])) {
+			total++;
+		}
+		else if (stoi(first_pair[1]) >= stoi(second_pair[0]) && stoi(first_pair[1]) <= stoi(second_pair[1])) {
+			total++;
+		}
+		else if (stoi(second_pair[0]) >= stoi(first_pair[0]) && stoi(second_pair[0]) <= stoi(first_pair[1])) {
+			total++;
+		}
+		else if (stoi(second_pair[1]) >= stoi(first_pair[0]) && stoi(second_pair[1]) <= stoi(first_pair[1])) {
+			total++;
+		}
+	}
+
+	cout << "Part 2 --- Total: " << total << '\n';
 }
 
 void Day4::SplitStr(const string& str, const char delim, vector<string>& out)
